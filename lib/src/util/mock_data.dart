@@ -5,7 +5,7 @@ AuthenticationTokenItem mockAuthenticationTokenItem() {
 }
 
 UserProfileItem mockUserProfileItem() {
-  return new UserProfileItem();
+  return new UserProfileItem(devices: []);
 }
 
 SignInResponseItem mockSignInResponseItem() {

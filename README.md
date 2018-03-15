@@ -1,4 +1,4 @@
-# panacea_client_2018
+# Flutter App
 
 A new Flutter project.
 

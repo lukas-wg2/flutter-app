@@ -31,8 +31,7 @@ class PanaceaClient2018 extends StatelessWidget {
         primarySwatch: Colors.red,
         buttonColor: Colors.orangeAccent
       ),
-      // home: new SignInPage(),
-        home: new DevicePage(),
+      home: new SignInPage(),
       routes: <String, WidgetBuilder>{
         MainPageRoute: (BuildContext context) => new DevicePage(),
         ProfilePageRoute: (BuildContext context) => new ProfilePage(),
