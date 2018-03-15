@@ -14,3 +14,7 @@ SignInResponseItem mockSignInResponseItem() {
     token: mockAuthenticationTokenItem()
   );
 }
+
+DeviceItem mockDeviceItem() {
+  return new DeviceItem(usage: (new Random().nextDouble() * 100).toString());
+}
