@@ -16,10 +16,11 @@ class SignInPage extends StatelessWidget {
         } else {
           Navigator.of(context).pushReplacementNamed(ProfilePageRoute);
         }
-      });
+      }).catchError((_) => print('ERROR HAPPENED'));
     }
 
     return new Scaffold(
+        floatingActionButton: createFloatingActionButton(context),
         appBar: new AppBar(
           title: new Text('Sign In')
         ),

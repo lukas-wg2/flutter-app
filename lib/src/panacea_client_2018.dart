@@ -24,6 +24,9 @@ part 'models/authentication_token_item.dart';
 part 'models/sign_in_response_item.dart';
 part 'models/user_profile_item.dart';
 part 'models/device_item.dart';
+part 'models/debug_state_item.dart';
+
+part 'widgets/debug_floating_action_button.dart';
 
 class PanaceaClient2018 extends StatelessWidget {
   @override

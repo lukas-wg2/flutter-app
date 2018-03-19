@@ -28,6 +28,7 @@ class _ProfilePageState extends State<ProfilePage> {
     }
 
     return new Scaffold(
+      floatingActionButton: createFloatingActionButton(context),
       appBar: new AppBar(
         title: new Text('Profile'),
         actions: <Widget>[

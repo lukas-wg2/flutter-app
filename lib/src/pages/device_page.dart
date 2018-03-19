@@ -22,7 +22,7 @@ class _DevicePageState extends State<DevicePage> {
       setState(() {
         _device = device;
       });
-    });
+    }).catchError((_) => print('ERROR HAPPENED!'));
   }
 
   Future<Null> _handleRefresh() {
@@ -47,6 +47,7 @@ class _DevicePageState extends State<DevicePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      floatingActionButton: createFloatingActionButton(context),
       appBar: new AppBar(
         title: new Text('Usage'),
           actions: <Widget>[
@@ -84,7 +85,7 @@ class _DevicePageState extends State<DevicePage> {
               child: new RaisedButton(onPressed: () {
                 // TODO: Add topup API
               }, child: new Text('Buy')),
-            )
+            ),
           ],)
         )
       )
