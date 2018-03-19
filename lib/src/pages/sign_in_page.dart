@@ -6,9 +6,11 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context){
 
     _performLogin() {
-      signInWithGoogle().then((response) {
-        // TODO: Store user profile and token locally
-        print(response.profile);
+      signInWithGoogle().then((SignInResponseItem response) {
+        GlobalState.token = response.token;
+        GlobalState.token.save();
+        GlobalState.profile = response.profile;
+        GlobalState.profile.save();
         if (response.profile.isValid()) {
           Navigator.of(context).pushReplacementNamed(MainPageRoute);
         } else {

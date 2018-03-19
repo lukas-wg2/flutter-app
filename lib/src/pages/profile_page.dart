@@ -22,7 +22,9 @@ class _ProfilePageState extends State<ProfilePage> {
     }
 
     _performLogout() {
-      Navigator.of(context).pushReplacementNamed(FirstRunPageRoute);
+      signOutFlow().then((_) {
+        Navigator.of(context).pushReplacementNamed(SignInPageRoute);
+      });
     }
 
     return new Scaffold(

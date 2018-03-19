@@ -54,7 +54,9 @@ class _DevicePageState extends State<DevicePage> {
                 icon: const Icon(Icons.power_settings_new),
                 tooltip: 'Logout',
                 onPressed: () {
-                  Navigator.of(context).pushReplacementNamed(FirstRunPageRoute);
+                  signOutFlow().then((_) {
+                    Navigator.of(context).pushReplacementNamed(SignInPageRoute);
+                  });
                 },
             ),
             new IconButton(
